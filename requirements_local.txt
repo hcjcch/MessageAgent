@@ -1,0 +1,19 @@
+# 本地部署版本依赖
+# 无需 Mem0 云服务 API Key
+
+# 核心依赖
+mem0ai>=0.0.1
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# 向量数据库 - 使用 ChromaDB
+chromadb>=0.4.0
+
+# 备选向量数据库：
+# qdrant-client>=1.9.1
+# faiss-cpu>=1.7.0
+
+# 可选：本地嵌入模型（不使用 OpenAI embeddings）
+# sentence-transformers>=2.0.0
+# transformers>=4.30.0
+
