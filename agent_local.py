@@ -210,6 +210,17 @@ class LocalConversationalAgent:
         # 添加当前用户消息
         messages.append({"role": "user", "content": user_message})
         
+        # 打印发送给 AI 的完整消息
+        print("\n" + "="*60)
+        print("📤 发送给 AI 的消息:")
+        print("="*60)
+        for i, msg in enumerate(messages, 1):
+            role = msg.get("role", "unknown")
+            content = msg.get("content", "")
+            print(f"\n[{i}] Role: {role}")
+            print(f"Content: {content}")
+        print("="*60 + "\n")
+        
         # 调用通义千问 API
         try:
             response = self.llm_client.chat.completions.create(
